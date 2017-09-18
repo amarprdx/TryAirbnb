@@ -8,9 +8,13 @@ application = default_app()
 def home():
 	return template("index.html")
 
+@route("/ForYou")
+def ForYou():
+	return template("ForYou.html")
+
 @route('/favicon.ico')
 def get_favicon():
-	return server_static('/static/sharingan.ico')
+	return server_static('/static/airbnb_icon.ico')
 
 #specifying the path for the file
 @route('/<filepath:path>')
